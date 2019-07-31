@@ -2,9 +2,11 @@ package spring.handson.annotations;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import java.io.IOException;
+
 public class AnnotationDemoApp {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         // Read spring config file
         ClassPathXmlApplicationContext context = new
                 ClassPathXmlApplicationContext("applicationContext.xml");

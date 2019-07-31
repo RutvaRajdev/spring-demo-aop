@@ -2,6 +2,8 @@ package spring.handson.annotations;
 
 import org.springframework.stereotype.Component;
 
+import java.io.IOException;
+
 @Component
 public class CricketCoach implements Coach{
     private FortuneService fortuneService;
@@ -10,7 +12,7 @@ public class CricketCoach implements Coach{
         return "Practice batting to yorker balls for 15 minutes";
     }
 
-    public String getDailyFortune() {
+    public String getDailyFortune() throws IOException {
         return fortuneService.getFortune();
     }
 }
