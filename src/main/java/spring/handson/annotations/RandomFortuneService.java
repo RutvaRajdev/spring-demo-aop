@@ -2,6 +2,7 @@ package spring.handson.annotations;
 
 import org.springframework.stereotype.Component;
 
+import javax.annotation.PostConstruct;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -12,7 +13,9 @@ import java.util.Random;
 public class RandomFortuneService implements FortuneService {
     private String[] services = new String[3];
 
+    @PostConstruct
     public void readFortunesFromFile() throws IOException {
+        System.out.println("Reading from file");
         //File file = new File("fortunes.txt");
 
         BufferedReader br = new BufferedReader(new FileReader("C:\\Rutva\\SpringCourse_Udemy\\HandsOn\\springdemoannotations\\src\\main\\java\\spring\\handson\\annotations\\fortunes.txt"));
@@ -40,9 +43,10 @@ public class RandomFortuneService implements FortuneService {
 
     public String getFortune() throws IOException {
         // Pick a random string from array
-        readFortunesFromFile();
+//        readFortunesFromFile();
 //        System.out.println(services[0]);
 //        System.out.println(services[2]);
+
         return services[myRand.nextInt(services.length)];
         //return null;
     }
