@@ -5,10 +5,11 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
 import java.io.IOException;
 
 @Component
-@Scope("prototype")
 public class TennisCoach implements Coach {
 
     @Autowired
@@ -17,6 +18,16 @@ public class TennisCoach implements Coach {
 
     public TennisCoach() {
         System.out.println("In Tennis coach default constructor");
+    }
+
+    @PostConstruct
+    public void initMethod() {
+        System.out.println("inside init method tenniscoach");
+    }
+
+    @PreDestroy
+    public void destroyMethod() {
+        System.out.println("inside destroy method tenniscoach");
     }
 
 //    @Autowired
