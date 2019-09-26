@@ -11,6 +11,9 @@ public class MainDemoApp {
         AccountDAO  accountDAO = context.getBean("accountDAO", AccountDAO.class);
         accountDAO.addAccount();
 
+        System.out.println("\n Let's call it again");
+        accountDAO.addAccount();
+
         context.close();
 
     }
