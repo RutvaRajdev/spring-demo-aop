@@ -3,11 +3,9 @@ package spring.handson.aopdemo.dao;
 import org.springframework.stereotype.Component;
 
 @Component
-public class AccountDAO {
+public class MembershipDAO {
 
     public void addAccount() {
-        System.out.println(getClass() + ": Adding Account");
+        System.out.println(getClass() + "Doing some stuff in membershipDAO class");
     }
-
-
 }
