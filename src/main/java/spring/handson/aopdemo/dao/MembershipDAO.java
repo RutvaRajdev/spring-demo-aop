@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class MembershipDAO {
 
-    public void addAccount() {
+    public void addSomething() {
         System.out.println(getClass() + "Doing some stuff in membershipDAO class");
     }
 }

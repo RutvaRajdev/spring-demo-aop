@@ -15,7 +15,7 @@ public class MainDemoApp {
         accountDAO.addAccount();
 
         System.out.println("\n MembershipDAO method");
-        membershipDAO.addAccount();
+        membershipDAO.addSomething();
 
         context.close();
 
