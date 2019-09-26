@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>HandsOn</groupId>
-    <artifactId>spring-demo-annotations</artifactId>
+    <artifactId>spring-demo-aop</artifactId>
     <version>1.0-SNAPSHOT</version>
     <dependencies>
         <dependency>
@@ -23,6 +23,14 @@
             <artifactId>spring-test</artifactId>
             <version>5.1.8.RELEASE</version>
         </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.aspectj/aspectjweaver -->
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjweaver</artifactId>
+            <version>1.9.4</version>
+        </dependency>
+
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
