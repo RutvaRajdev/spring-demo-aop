@@ -14,9 +14,11 @@ public class MainDemoApp {
 
         Account account = new Account();
         accountDAO.addAccount(account, true);
+        accountDAO.doWork();
 
         System.out.println("\n MembershipDAO method");
         membershipDAO.addSomething();
+        membershipDAO.goToSleep();
 
         context.close();
 
